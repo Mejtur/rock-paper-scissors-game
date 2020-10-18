@@ -1,0 +1,43 @@
+@import "variables";
+
+.choice {
+  background: #ffffff;
+  text-align: center;
+  height: 180px;
+  width: 180px;
+  cursor: pointer;
+  border: 25px solid transparent;
+  border-radius: 50%;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  img {
+    padding-top: 35px;
+  }
+}
+
+.paper {
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, $paper);
+}
+
+.scissors {
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at bottom left, $scissors);
+}
+
+.rock {
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top, $rock);
+}
+
+@media (max-width: 600px) {
+  .choice {
+    height: 120px;
+    width: 120px;
+    border: 15px solid transparent;
+
+    img {
+      padding-top: 15px;
+    }
+  }
+}
