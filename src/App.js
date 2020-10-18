@@ -1,10 +1,11 @@
 import React from 'react';
-import './App.css';
+import Board from './components/Board';
+import "./sass/main.scss";
 
 function App() {
   return (
     <div className="app">
-      hello world
+      <Board />
     </div>
   );
 }

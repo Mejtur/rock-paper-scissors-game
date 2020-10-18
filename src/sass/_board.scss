@@ -1,0 +1,68 @@
+@import "variables";
+
+.board {
+  padding-top: 30px;
+
+  &__container {
+    @include flex;
+    width: 60%;
+    margin: 0 auto;
+    border: 3px solid $header-outline;
+    border-radius: 30px;
+    padding: 20px;
+  }
+
+  &__scoreContainer {
+    @include flex;
+    background: white;
+    flex-direction: column;
+    font-family: $font;
+    border-radius: 10px;
+    padding: 15px 30px;
+  }
+
+  &__title {
+    color: $score-text;
+    letter-spacing: 1px;
+  }
+
+  &__score {
+    font-size: 48px;
+    color: $dark-text;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 768px) {
+  .board__container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 450px) {
+  .board__container > img {
+    transform: scale(0.8);
+  }
+
+  .board__container {
+    padding: 15px;
+    width: 95%;
+  }
+}
+
+@media (max-width: 320px) {
+  .board__title {
+    font-size: 12px;
+  }
+  .board__score {
+    font-size: 36px;
+  }
+
+  .board__container > img {
+    transform: scale(0.6);
+  }
+
+  .board__scoreContainer {
+    padding: 10px 20px;
+  }
+}

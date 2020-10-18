@@ -1,0 +1,7 @@
+@import "variables";
+
+.app {
+  background: linear-gradient(to right, $background);
+  height: 100vh;
+  width: 100%;
+}
