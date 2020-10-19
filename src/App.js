@@ -1,11 +1,22 @@
 import React from 'react';
-import Board from './components/Board';
+import StartGame from './components/StartGame';
+import Game from './components/Game';
 import "./sass/main.scss";
+import {BrowserRouter as Router, Switch,Route} from 'react-router-dom';
 
 function App() {
   return (
     <div className="app">
-      <Board />
+      <Router>
+        <Switch >
+          <Route exact path="/">
+            <StartGame />
+          </Route>
+          <Route path="/game">
+            <Game />
+          </Route>
+      </Switch>
+      </Router>
     </div>
   );
 }

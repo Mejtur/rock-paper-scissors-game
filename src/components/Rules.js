@@ -1,12 +1,12 @@
 import React from 'react'
 
-function Rules() {
+function Rules({setIsModalOpen}) {
     return (
         <div className="rules">
-            <button className="rules__btn">
-                RULES
-            </button>
-        </div>
+                <button className="rules__btn" onClick={()=>{setIsModalOpen(true)}}>
+                    RULES
+                </button>
+            </div>
     )
 }
 

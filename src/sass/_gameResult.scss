@@ -1,0 +1,21 @@
+@import "variables";
+
+.gameResult {
+  width: 60%;
+  margin: 0 auto;
+  height: 400px;
+
+  @include flex;
+
+  &__result {
+    text-align: center;
+  }
+
+  &__title {
+    color: white;
+    font-family: $font;
+    font-weight: 600;
+    font-size: 24px;
+    padding-bottom: 80px;
+  }
+}
