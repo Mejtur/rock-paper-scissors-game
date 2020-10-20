@@ -3,16 +3,21 @@ import {createSlice} from '@reduxjs/toolkit';
 export const gameStart = createSlice({
     name:'game',
     initialState:{
-        isStarted : false,
+        playerChoice:null,
+        computerChoice:null,
     },
     reducers:{
-        setGame: (state,action) => {
-            state.isStarted = action.payload.isStarted;
-        }
-    }
+        setPlayer:(state,action)=>{
+            state.playerChoice=action.payload.playerChoice;
+        },
+        setComputer:(state,action)=>{
+            state.computerChoice=action.payload.computerChoice;
+        },
+    },
 });
 
-export const {setGame} = setGame.actions;
-export const selectIsStarted = state => state.game.isStarted;
+export const {setPlayer,setComputer} = gameStart.actions;
+export const selectPlayerChoice = state => state.game.playerChoice;
+export const selectComputerChoice = state => state.game.computerChoice;
 
 export default gameStart.reducer;

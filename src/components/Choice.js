@@ -1,10 +1,25 @@
 import React from 'react'
 import {useHistory} from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import {setPlayer} from '../features/gameStart';
 
 function Choice({name,image}) {
 
+    const dispatch = useDispatch(
+        setPlayer({
+            playerName:name,
+            playerImage:image,
+        })
+    )
+
+
     const history = useHistory();
-    const handleClick = () => {
+    const handleClick = (e) => {
+        e.preventDefault();
+        dispatch(setPlayer({
+            playerName:name,
+            playerImage:image,
+        }))
         history.push("game");
     }
 
