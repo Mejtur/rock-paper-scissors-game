@@ -1,8 +1,12 @@
 import {configureStore} from '@reduxjs/toolkit';
-import gameReducer from '../features/gameStart';
+import computerReducer from '../features/computerChoice';
+import playerReducer from '../features/playerChoice';
+import scoreReducer from '../features/gameScore';
 
 export default configureStore({
     reducer: {
-        game: gameReducer,
+        computer: computerReducer,
+        player: playerReducer,
+        score: scoreReducer,
     }
 })
