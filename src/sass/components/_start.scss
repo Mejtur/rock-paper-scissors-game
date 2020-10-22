@@ -1,12 +1,12 @@
-@import "variables";
-
+@import "../utils/variables";
+@import "../utils/mixins";
 .start {
   width: 600px;
   height: 100%;
   margin: 60px auto;
 
   &__container {
-    background-image: url("../images/bg-triangle.svg");
+    background-image: url("../../images/bg-triangle.svg");
     background-size: 250px 250px;
     background-repeat: no-repeat;
     background-position: center;

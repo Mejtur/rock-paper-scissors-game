@@ -8,9 +8,9 @@ function RulesModal({isModalOpen,setIsModalOpen}) {
             <div className="rulesModal__container">
             <div className="rulesModal__title">
                 <p>RULES</p>
-                <img src={Close} alt="closeModal" onClick={()=>{setIsModalOpen(false)}}/>
+                <img src={Close} alt="closeModal" onClick={()=>{setIsModalOpen(false)}} className="rulesModal__close"/>
             </div>
-            <img src={RulesImg} alt="image" className="rulesModal__image"/>
+            <img src={RulesImg} alt="rulesModalImage" className="rulesModal__image"/>
             </div>
         </div>
     )

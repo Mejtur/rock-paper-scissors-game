@@ -34,9 +34,6 @@ const dispatch = useDispatch(
             computerName:variables[randomNumber].name,
             computerImage:variables[randomNumber].image,
         }))
-    },[])
-    
-    useEffect(() => {
         if(playerName==="paper"){
             if(variables[randomNumber].name==="paper"){
                 setText("Draw")
@@ -50,7 +47,7 @@ const dispatch = useDispatch(
                 setText("You Lose")
             }else if(variables[randomNumber].name==="rock"){
                 setText("Draw")
-            }else{
+            }else if(variables[randomNumber].name==="scissors"){
                 setText("You Win")
             }
         }else if(playerName==="scissors"){
@@ -58,18 +55,17 @@ const dispatch = useDispatch(
                 setText("You Win")
             }else if(variables[randomNumber].name==="rock"){
                 setText("You Lose")
-            }else{
+            }else if(variables[randomNumber].name==="scissors"){
                 setText("Draw")
             }
         }else{
             setText("Something went wrong")
         }
+
     },[randomNumber])
 
     setTimeout(()=>setShowPlayAgain(true),1000);
 
-    console.log(showPlayAgain);
-    console.log(text);
     return (
         <div className="gameResult">
             <div className="gameResult__result">

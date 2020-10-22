@@ -7,7 +7,7 @@ function Score() {
     const score = useSelector(selectScore);
     return (
         <div className="board__container">
-                <img src={Logo}/>
+                <img src={Logo} alt="scoreLogo"/>
                 <div className="board__scoreContainer">
                     <p className="board__title">SCORE</p>
                     <p className="board__score">{score}</p>

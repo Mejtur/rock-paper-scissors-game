@@ -1,5 +1,5 @@
-@import "variables";
-
+@import "../utils/variables";
+@import "../utils/mixins";
 .board {
   padding-top: 30px;
 
